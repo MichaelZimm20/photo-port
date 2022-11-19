@@ -20,12 +20,12 @@ afterEach(cleanup);
 describe('About component', () => {
     //-------------------renders About test----------------------//
 
-    //First Test 
+    //First Test, baseline test
     it('renders', () => {
         render(<About />);
     });
 
-    //Second Test 
+    //Second Test, snapshot test 
     it('matches snapshot DOM node structure', () => {
         // render About 
         const { asFragment } = render(<About />);

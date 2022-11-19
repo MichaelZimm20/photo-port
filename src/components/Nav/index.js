@@ -22,14 +22,14 @@ function Nav() {
     return (
         <header>
             <h2>
-                <a href='/'>
-                    <span role='img' aria-label='camera'>📸</span> Oh Snap!
+                <a data-testid="link" href='/'>
+                    <span role='img' aria-label="camera">📸</span> Oh Snap!
                 </a>
             </h2>
             <nav>
-                <ul className='flex-row'>
+                <ul className='flex-row px-1'>
                     <li className='mx-2'>
-                        <a href='#about' onClick={() => handleClick()}>
+                        <a data-testid="about" href='#about' onClick={() => handleClick()}>
                             About Me
                         </a>
                     </li>
