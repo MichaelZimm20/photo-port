@@ -3,14 +3,6 @@ import { capitalizeFirstLetter } from "../../utils/helpers";
 
 function Nav(props) {
 
-    // function categorySelected(name) {
-    //     console.log(`${name} clicked`)
-    // };
-
-    // const handleClick = () => {
-    //     console.log("click handled")
-    //   }
-
     // props object 
     const {
         categories = [],
@@ -20,10 +12,10 @@ function Nav(props) {
 
     // useEffect Hook
     // first argument is the callback function
-    // Second argument is an array with a single element, currentCategory.  directs the hook to re-render the component on changes to the value of this state
+    // Second argument is an array with a single element, currentCategory.  directs the hook to re-render the component on changes to the value of this stateg
     useEffect(() => {
         document.title = capitalizeFirstLetter(currentCategory.name);
-    },[currentCategory]);
+    }, [currentCategory]);
     
     return (
         <header>
