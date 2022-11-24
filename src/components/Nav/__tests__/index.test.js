@@ -9,6 +9,8 @@ const categories = [
 ]
 const mockCurrentCategory = jest.fn();
 const mockSetCurrentCategory = jest.fn();
+const mockcontactSelected = jest.fn();
+const mocksetContactSelected = jest.fn();
 //============================= Configure the Testing Environment ================================//
 
 // adding a utility function to keep things clean
@@ -16,7 +18,7 @@ afterEach(cleanup);
 
 // describe function, declare the component we're testing
 describe('Nav component', () => {
-    //-------------------renders About test----------------------//
+    //-------------------renders Nav test----------------------//
 
     //baseline Test 
     it('renders', () => {
@@ -24,16 +26,20 @@ describe('Nav component', () => {
           categories={categories}
           setCurrentCategory={mockSetCurrentCategory}
           currentCategory={mockCurrentCategory}
+          contactSelected={mockcontactSelected}
+          setContactSelected={mocksetContactSelected}
         />);
     });
 
     //snapshot Test 
     it('matches snapshot', () => {
-        // render About 
+        // render Nav 
         const { asFragment } = render(<Nav 
           categories={categories}
           setCurrentCategory={mockSetCurrentCategory}
           currentCategory={mockCurrentCategory}
+          contactSelected={mockcontactSelected}
+          setContactSelected={mocksetContactSelected}
         />);
         expect(asFragment()).toMatchSnapshot();
     });
@@ -49,6 +55,8 @@ describe('emoji is visible', () => {
           categories={categories}
           setCurrentCategory={mockSetCurrentCategory}
           currentCategory={mockCurrentCategory}
+          contactSelected={mockcontactSelected}
+          setContactSelected={mocksetContactSelected}
           />);
 
         // Assert
@@ -65,6 +73,8 @@ describe('links are visible', () => {
           categories={categories}
           setCurrentCategory={mockSetCurrentCategory}
           currentCategory={mockCurrentCategory}
+          contactSelected={mockcontactSelected}
+          setContactSelected={mocksetContactSelected}
         />);
       // Assert
       expect(getByTestId('link')).toHaveTextContent('Oh Snap!');
