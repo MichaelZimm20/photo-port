@@ -15,7 +15,7 @@ describe('PhotoList is rendering', () => {
          expect(asFragment()).toMatchSnapshot()
     });
 
-    it('renders img', () => {
-        const { getElementsByClassName } render(<PhotoList currentCategory={landscape} />)
-    })
+    // it('renders img', () => {
+    //     const { getElementsByClassName } = render(<PhotoList currentCategory={'landscape'} />)
+    // })
 })
